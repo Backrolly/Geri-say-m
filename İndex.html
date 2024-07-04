@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geri Sayım ve Medya</title>
+    <title>Geri Sayım ve Sevgi Notu</title>
     <style>
         body {
             display: flex;
@@ -17,24 +17,23 @@
             font-size: 2em;
             margin-bottom: 20px;
         }
-        #media {
+        #message {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 20px;
             display: none;
         }
     </style>
 </head>
 <body>
     <div id="countdown"></div>
-    <div id="media">
-        <video id="video" width="640" height="360" controls>
-            <source src="your-video-file.mp4" type="video/mp4">
-            Tarayıcınız video etiketini desteklemiyor.
-        </video>
-        <!-- Eğer bir resim veya slayt göstermek isterseniz -->
-        <!-- <img id="image" src="your-image-file.jpg" alt="Görsel"> -->
+    <div id="message">
+        <p>Seni çok seviyorum!</p>
     </div>
 
     <script>
-        var countDownDate = new Date("Jul 4, 2024 06:47:00").getTime();
+        // Tarih ve saat 04.07.2024 06:50 olarak ayarlandı
+        var countDownDate = new Date("July 4, 2024 06:50:00").getTime();
 
         var x = setInterval(function() {
             var now = new Date().getTime();
@@ -48,8 +47,7 @@
             if (distance < 0) {
                 clearInterval(x);
                 document.getElementById("countdown").innerHTML = "Geri sayım bitti!";
-                document.getElementById("media").style.display = "block";
-                document.getElementById("video").play();
+                document.getElementById("message").style.display = "block";
             }
         }, 1000);
     </script>
